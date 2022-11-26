@@ -1,0 +1,17 @@
+parameters:
+	level: 6
+	phpVersion: 70400
+	checkMissingIterableValueType: false
+	inferPrivatePropertyTypeFromConstructor: true
+	bootstrapFiles:
+		- phpstan-bootstrap.php
+	paths:
+		- app/Models
+		- app/Traits
+		- app/Http
+	excludePaths:
+		- app/Providers/*
+	ignoreErrors:
+		- '#Method App\\Http\\Middleware\\(.*)#'
+		- '#Class App\\Http\\Middleware\\(.*)#'
+		- '#Class Illuminate\\Foundation\\Http\\Middleware\\(.*)#'
