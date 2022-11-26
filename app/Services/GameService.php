@@ -27,12 +27,22 @@ class GameService implements IGame
 
     }
 
+    /**
+     * @return void
+     * Shuffles the deck of cards
+     */
     public function shuffleDeck()
     {
         $this->dealt = collect($this->deck)->shuffle();
     }
 
-    public function playCards(Request $request)
+    /**
+     * @param Request $request
+     * Takes in number of people and returns cards dealt to those people
+     * @return array
+     */
+
+    public function playCards(Request $request): array
     {
         $rules = [
             'number_people' => 'required|int|min:1',
