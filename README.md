@@ -6,9 +6,6 @@
 
 > **Requires:**
 - **[Docker](https://www.docker.com/)**
-- **[PHP 8.0+](https://php.net/releases/)**
-- **[Laravel 9.0+](https://github.com/laravel/laravel)**
-
 
 > **File to copy and replace:**
 ###Copy .env.example and rename as the new .env file
@@ -23,11 +20,11 @@ git clone https://github.com/lord-zeus/Cards.git
 cd Cards
 docker compose up
 ```
-
+When server starts, open your browser to [localhost:8000](http://localhost:8000)
 
 #### Run Test
 
-```bash
+```
 # Test Command
 docker-compose exec myapp php artisan test
 
@@ -36,8 +33,6 @@ docker-compose exec myapp php artisan test
 
 #### N/B
 
-```bash
-# Laravel Docker might take a little while to build
-```
+_Laravel Docker might take a little while to start_
 
 
