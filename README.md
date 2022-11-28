@@ -5,7 +5,9 @@
 
 
 > **Requires:**
-- **[Docker](https://www.docker.com/)**
+- **[PHP:8](https://www.docker.com/)**
+- - **[Composer](https://getcomposer.org/download/)**
+- - **[Node ](https://nodejs.org/en/download/)**
 
 > **File to copy and replace:**
 ###Copy .env.example and rename as the new .env file
@@ -13,14 +15,25 @@
 > **Things to run!!:**
 >
 
-#### Build Setup
+#### Build servers
 
 ``` bash
-git clone https://github.com/lord-zeus/Cards.git
-cd Cards
-docker compose up
+composer install
+npm install
 ```
-When server starts, open your browser to [localhost:8000](http://localhost:8000)
+#### Start Laravel backend server
+
+```bash
+php artisan serve
+```
+
+#### Start front-end development server
+
+```bash
+npm run dev
+```
+
+When servers start, open your browser to [localhost:8000](http://localhost:8000)
 
 #### Run Test
 
@@ -29,10 +42,4 @@ When server starts, open your browser to [localhost:8000](http://localhost:8000)
 docker-compose exec myapp php artisan test
 
 ```
-
-
-#### N/B
-
-_Laravel Docker might take a little while to start_
-
 
